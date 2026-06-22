@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านหูฟังสุดล้ำ - Earphone Hub</title>
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Prompt';
+        }
+
+        body {
+            background-color: #f5f5f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- ส่วนสำคัญ: เมนูบาร์ด้านบนแบบติดหน้าจอ (Fixed Navigation) --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000; /* เพื่อให้เมนูอยู่เหนือนื้อหาอื่นเสมอ */
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            color: #ff4757;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 20px;
+        }
+
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ff4757; /* เปลี่ยนสีเมื่อเอาเมาส์ไปชี้ */
+        }
+
+        /* --- ส่วนเนื้อหา (Content Sections) --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* เว้นระยะด้านบนเพื่อไม่ให้เนื้อหาโดนเมนูบัง */
+        section {
+            padding: 100px 20px 60px 20px; 
+            margin-bottom: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-section h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a1a1a;
+            border-left: 5px solid #ff4757;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* ปรับแต่งส่วนบริการ */
+        .services-grid {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .service-card h3 {
+            color: #ff4757;
+            margin-bottom: 10px;
+        }
+
+        /* ปรับแต่งส่วนติดต่อ */
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-facebook { background-color: #1877f2; }
+        .btn-line { background-color: #06c755; }
+    </style>
+</head>
+<body>
+
+    <!-- เมนูบาร์ด้านบน -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">🎧 ProAudio</a>
+            <ul class="nav-menu">
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#about">เกี่ยวกับเรา</a></li>
+                <li><a href="#services">บริการของเรา</a></li>
+                <li><a href="#contact">ติดต่อเรา</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- หน้าแรก -->
+    <div class="container">
+        <section id="home" class="hero-section">
+            <h1>ยินดีต้อนรับสู่ ProAudio Shop</h1>
+            <p>ศูนย์รวมหูฟังชั้นนำ และบริการซ่อมแซมระดับมืออาชีพ</p>
+        </section>
+
+        <!-- เกี่ยวกับเรา -->
+        <section id="about">
+            <h2>เกี่ยวกับเรา</h2>
+            <h3>ความเป็นมาของเรา</h3>
+            <p>ร้าน ProAudio ของเราเริ่มต้นจากความหลงใหลในคุณภาพเสียงอันยอดเยี่ยม เราก่อตั้งขึ้นในปี พ.ศ. 2560 โดยกลุ่มวิศวกรเสียงและช่างเทคนิคผู้เชี่ยวชาญด้านหูฟัง ตลอดระยะเวลาที่ผ่านมาเรามุ่งมั่นที่จะส่งมอบประสบการณ์การฟังเพลงที่ดีที่สุดให้แก่ลูกค้าทุกท่าน ไม่ว่าจะเป็นกลุ่มนักฟังเพลงทั่วไป หรือระดับหูทอง (Audiophile)</p>
+        </section>
+
+        <!-- บริการ -->
+        <section id="services">
+            <h2>บริการของเรา</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🛠️ บริการซ่อมหูฟัง</h3>
+                    <p>รับซ่อมหูฟังทุกอาการ เช่น สายขาดใน, ลำโพงดับหนึ่งข้าง, เปลี่ยนฟองน้ำ, เปลี่ยนแบตเตอรี่หูฟังไร้สาย (Bluetooth) และโมดิฟายด์อัปเกรดสายเพื่อคุณภาพเสียงที่ดีขึ้น โดยช่างผู้เชี่ยวชาญมีประกันหลังงานซ่อม</p>
+                </div>
+                <div class="service-card">
+                    <h3>🛒 จำหน่ายหูฟัง</h3>
+                    <p>ศูนย์รวมหูฟังแท้จากแบรนด์ชั้นนำระดับโลก มีให้เลือกสรรทุกประเภท เช่น In-Ear, On-Ear, Over-Ear, และหูฟัง Gaming ของแท้ประกันศูนย์ไทย 100% พร้อมห้องสตูดิโอสำหรับทดลองฟังก่อนตัดสินใจซื้อ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ติดต่อ -->
+        <section id="contact">
+            <h2>ติดต่อเรา</h2>
+            <p style="margin-bottom: 20px;">หากคุณมีข้อสงสัย ต้องการปรึกษาอาการเสียของหูฟัง หรือสนใจสั่งซื้อสินค้า สามารถติดต่อเราได้ตามช่องทางออนไลน์ด้านล่างนี้เลยครับ:</p>
+            <div class="contact-links">
+                <a href="https://facebook.com" target="_blank" class="btn-facebook">Facebook: ProAudio Thailand</a>
+                <a href="https://line.me" target="_blank" class="btn-line">Line Official: @proaudio</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
